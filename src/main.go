@@ -3,5 +3,9 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println("Hello World")
+	createBingoCard()
+}
+
+func createBingoCard() {
+	fmt.Println("ビンゴカードを作成します。")
 }
