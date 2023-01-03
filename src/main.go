@@ -24,18 +24,18 @@ func createBingoCard() {
 	numList := createNumList()
 	var card [bingoCardSize]int
 	for i := 0; i < bingoCardSize; i++ {
-		var targetKey int
+		var randomKey int
 		for {
 			rand.Seed(time.Now().UnixNano())
-			targetKey = rand.Intn(maxBingoNum)
-			if numList[targetKey] == 0 {
+			randomKey = rand.Intn(maxBingoNum)
+			if numList[randomKey] == 0 {
 				continue
 			} else {
 				break
 			}
 		}
-		card[i] = numList[targetKey]
-		numList[targetKey] = 0
+		card[i] = numList[randomKey]
+		numList[randomKey] = 0
 	}
 }
 
