@@ -24,9 +24,18 @@ func createBingoCard() {
 	numList := createNumList()
 	var card [bingoCardSize]int
 	for i := 0; i < bingoCardSize; i++ {
-		rand.Seed(time.Now().UnixNano())
-		// 数字が重複する可能性があるビンゴカードが作成されている
-		card[i] = numList[rand.Intn(50)]
+		var targetKey int
+		for {
+			rand.Seed(time.Now().UnixNano())
+			targetKey = rand.Intn(maxBingoNum)
+			if numList[targetKey] == 0 {
+				continue
+			} else {
+				break
+			}
+		}
+		card[i] = numList[targetKey]
+		numList[targetKey] = 0
 	}
 }
 
