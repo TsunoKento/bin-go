@@ -21,7 +21,7 @@ func main() {
 func createBingoCard() {
 	fmt.Println("ビンゴカードを作成します。")
 
-	numList := createNumList()
+	numList := createNumList(maxBingoNum)
 	var card [bingoCardSize]int
 	for i := 0; i < bingoCardSize; i++ {
 		if i == bingoCardSize/2 {
@@ -42,9 +42,9 @@ func createBingoCard() {
 	}
 }
 
-func createNumList() [maxBingoNum]int {
-	var numList [maxBingoNum]int
-	for i := 1; i <= maxBingoNum; i++ {
+func createNumList(maxNum int) []int {
+	numList := make([]int, maxNum)
+	for i := 1; i <= maxNum; i++ {
 		numList[i-1] = i
 	}
 
