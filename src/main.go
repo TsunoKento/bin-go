@@ -40,6 +40,9 @@ func createBingoCard() {
 		card[i] = numList[randomKey]
 		numList[randomKey] = 0
 	}
+
+	fmt.Println("ビンゴカードが作成できました")
+	// ビンゴカードを表示させる
 }
 
 func createNumList(maxNum int) []int {
