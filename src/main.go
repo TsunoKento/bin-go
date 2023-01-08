@@ -43,6 +43,11 @@ func createBingoCard() {
 
 	fmt.Println("ビンゴカードが作成できました")
 	// ビンゴカードを表示させる
+	showBingoCard()
+}
+
+func showBingoCard() {
+	fmt.Println("ビンゴカードを表示します")
 }
 
 func createNumList(maxNum int) []int {
