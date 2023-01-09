@@ -13,6 +13,9 @@ const (
 
 func main() {
 	createBingoCard()
+
+	// ビンゴカードを表示させる
+	showBingoCard()
 }
 
 // 5*5で作成する
@@ -42,8 +45,6 @@ func createBingoCard() {
 	}
 
 	fmt.Println("ビンゴカードが作成できました")
-	// ビンゴカードを表示させる
-	showBingoCard()
 }
 
 func showBingoCard() {
